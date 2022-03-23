@@ -98,7 +98,7 @@ bot.on(`message`, async message => {
                     },
                 )
                 .setTimestamp()
-                .setFooter('made by un boxing man yt', 'https://play.unboxingman.com/logo.png')
+                .setFooter('made by un boxing hosting', 'https://bots.unboxingman.com/logo.png')
 
             message.channel.send({
                 embeds: [help]
