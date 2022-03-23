@@ -9,6 +9,7 @@ module.exports = {
     usage: '[command name]',
     cooldown: 5,
     execute(bot, message, args) {
+        const idlist = await bot.list;
         const prefix = bot.prefix
         const data = [];
         //const {

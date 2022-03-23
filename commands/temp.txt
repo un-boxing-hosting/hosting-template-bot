@@ -1,0 +1,14 @@
+const db = require('quick.db');
+module.exports = {
+	name: '',
+    aliases: ['', ''],
+	description: '',
+    cooldown: 5,
+    usage: '',
+    guildOnly: true,
+    args: true,
+    hidden: false,
+	async execute(bot, message, args) {
+		const idlist = await bot.list;
+	},
+};

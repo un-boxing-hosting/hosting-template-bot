@@ -103,50 +103,6 @@ for (const file of commandFiles) {
 }
 
 
-bot.on(`message`, async message => {
-     const idlist = await list;
-    if (!message.content.startsWith(config.prefix)) return
-    const prefix = config.prefix;
-    if (!message.content.startsWith(prefix)) return;
-
-    const args2 = message.content.slice(prefix.length).split(/ +/);
-    const args = message.content.split(/\s+/g);
-    const command = args.shift().slice(prefix.length).toLowerCase();
-    console.log(command)
-    switch (command) {
-        case `help`:
-            const help = new Discord.MessageEmbed()
-
-                .setColor('BLUE')
-                .setTitle('pc-power help')
-                .setURL('https://bots.unboxingman.com')
-                .setAuthor('pc power', 'https://play.unboxingman.com/logo.png', 'https://bots.unboxingman.com')
-                .setDescription(` my commands`)
-                .setThumbnail('https://play.unboxingman.com/logo.png')
-                .addFields(
-                    //{ name: `${prefix}help`, value: `my help menu` },
-                    {
-                        name: `${prefix}help`,
-                        value: `my help menu`
-                    }, {
-                        name: `${prefix}support`,
-                        value: `join my suport server for help`
-                    },
-                )
-                .setTimestamp()
-                .setFooter('made by un boxing hosting', 'https://bots.unboxingman.com/logo.png')
-
-            message.channel.send({
-                embeds: [help]
-            });
-            break;
-        case `support`:
-            message.channel.send(`https://bots.unboxingman.com/support`)
-            break;
-    }
-
-})
-
 //#endregion
 
 bot.login(config.token);
